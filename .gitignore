@@ -1,7 +1,2 @@
 # dependencies
-/node_modules/
-
-# error_log_filess
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+/node_modules
