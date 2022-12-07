@@ -8,14 +8,14 @@
 html {
   font-family: 'Noto Sans JP', sans-serif;
 }
-body {
+/* body {
   overflow: hidden;
-}
+} */
 #bg {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(to bottom, #7983FC, #BF96B7);
+  background: linear-gradient(to bottom, #7983fc, #BF96B7);
 }
 main {
   padding: 12px;
@@ -156,23 +156,23 @@ main {
 #light.light-on > .mod-content {
   transform: translateY(-2px);
 }
-#light-icon > img {
-  height: 53.4px;
-  width: 53.4px;
-  transform: translateY(4.1px);
-  filter: invert(7%) sepia(9%) saturate(44%) hue-rotate(314deg) brightness(82%) contrast(84%) opacity(.5);
-}
 #light.light-on #light-icon > img {
   height: 61.4px;
   width: 61.4px;
   transform: translateY(0);
   filter: invert(7%) sepia(9%) saturate(44%) hue-rotate(314deg) brightness(82%) contrast(84%);
 }
-#light-power-consump {
-  margin-top: 10.6px;
+#light.light-off #light-icon > img {
+  height: 53.4px;
+  width: 53.4px;
+  transform: translateY(4.1px);
+  filter: invert(7%) sepia(9%) saturate(44%) hue-rotate(314deg) brightness(82%) contrast(84%) opacity(.5);
 }
 #light.light-on #light-power-consump {
   margin-top: 6.5px;
+}
+#light.light-off #light-power-consump {
+  margin-top: 10.6px;
 }
 #light-power-price {
   margin-top: 1.8px;
@@ -208,9 +208,14 @@ main {
   height: 61.4px;
   width: 61.4px;
   transform: translateX(-10px);
-  filter: invert(7%) sepia(9%) saturate(44%) hue-rotate(314deg) brightness(82%) contrast(84%) opacity(.5);
+}
+#restroom #restroom-icon > img {
+  filter: opacity(.5) invert(7%) sepia(9%) saturate(44%) hue-rotate(314deg) brightness(82%) contrast(84%);
 }
 #restroom.restroom-in-use #restroom-icon > img {
+  filter: opacity(1);
+}
+#restroom.restroom-free #restroom-icon > img {
   filter: opacity(1);
 }
 #restroom-status {
@@ -218,18 +223,13 @@ main {
   font-size: 37.4px;
   letter-spacing: 0.1px;
   transform: translate(-15px, -1.6px);
-}
-#restroom-status::after {
   opacity: .5;
-  content: '--';
 }
-#restroom.restroom-free #restroom-status::after {
-  opacity: .5;
-  content: '空室';
-}
-#restroom.restroom-in-use #restroom-status::after {
+#restroom.restroom-in-use #restroom-status {
   opacity: 1;
-  content: '使用中';
+}
+#restroom.restroom-free #restroom-status {
+  opacity: .5;
 }
 /* clock */
 #clock {
@@ -274,7 +274,6 @@ footer {
   right: 0;
   bottom: 0;
   color: rgba(248, 248, 248, .7);
-  letter-spacing: 1.6px;
 }
 footer.fade-in {
   animation-duration: 2s;
@@ -283,14 +282,55 @@ footer.fade-in {
   margin-bottom: 0.8px;
   font-size: 31.4px;
   font-weight: 600;
+  letter-spacing: 1.2px;
 }
 #copyright > small {
   font-size: 18.8px;
   font-weight: 300;
+  letter-spacing: 1.6px;
 }
 /* tablet */
 @media screen and (max-width: 1024px) {
   main {
     padding: 29px 12px;
+  }
+}
+/* smartphone */
+@media screen and (max-width: 414px) {
+  #mod-panel {
+    max-height: calc(12px + 220.5px + 12px + 12px + 220.5px + 40px);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 86%, rgba(180, 150, 191, 0.9));
+    overflow: auto;
+  }
+  .mod-box {
+    margin: 12px 0;
+  }
+  #clock {
+    text-align: right;
+    left: auto;
+    right: 0;
+    bottom: calc(74px - 8px);
+    margin-left: 0;
+    margin-right: calc(53.9px - 8.8px);
+    text-shadow: #21212160 0 0 16px;
+  }
+  #clock-date {
+    margin-right: 8px;
+    font-size: calc(25px * .7);
+    letter-spacing: calc(1.4px * .7);
+  }
+  #clock-time {
+    font-size: calc(88px * .7);
+    letter-spacing: calc(1.5px * .7);
+  }
+  footer {
+    bottom: 8px;
+  }
+  #place > h2 {
+    font-size: calc(18.8px * .7);
+    letter-spacing: 1.6px;
+  }
+  #copyright > small {
+    font-size: calc(18.8px * .7);
   }
 }

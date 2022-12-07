@@ -1,3 +1,4 @@
+// import ScrollHint from 'scroll-hint';
 import ModTemperature from './ModTemperature';
 import ModHumidity from './ModHumidity';
 import ModLight from './ModLight';
@@ -5,9 +6,10 @@ import ModAttendance from './ModAttendance';
 import ModRestroom from './ModRestroom';
 import ModUnused from './ModUnused';
 
+
 const ModPanel = ({modData}) => {
   return (
-    <div id="mod-panel">
+    <div id="mod-panel" className="scroll-hint">
       <ModTemperature temperature={modData ? modData.temperature : null} />
       <ModHumidity humidity={modData ? modData.humidity : null} />
       <ModLight light={modData ? modData.light : null} />
