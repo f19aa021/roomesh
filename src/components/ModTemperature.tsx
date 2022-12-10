@@ -1,6 +1,10 @@
 import temperatureIcon from '../assets/img/temperature_icon.svg';
 
-const ModTemperature = ({temperature}) => {
+type Props = {
+  temperature: number | null;
+}
+
+const ModTemperature:React.FC<Props> = ({temperature}: Props) => {
   return (
     <div className="mod-box fade-up" id="temperature">
       <div className="mod-title">

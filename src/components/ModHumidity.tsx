@@ -1,6 +1,10 @@
 import humidityIcon from '../assets/img/humidity_icon.svg';
 
-const ModHumidity = ({humidity}) => {
+type Props = {
+  humidity: number | null;
+}
+
+const ModHumidity: React.FC<Props> = ({humidity}: Props) => {
   return (
     <div className="mod-box fade-up" id="humidity">
       <div className="mod-title">

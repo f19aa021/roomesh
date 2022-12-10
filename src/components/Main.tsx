@@ -1,22 +1,29 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import axios, {AxiosResponse, AxiosError} from 'axios';
 import ModPanel from './ModPanel';
+import MESH_GAS_API_URL from '../assets/api/MESH_GAS_API_URL';
+import ModData from '../assets/api/ModData';
 
-const Main = () => {
-  const [isFirstLoad, setIsFirstLoad] = useState(true);
-  const [modData, setModData] = useState(null);
-  const MESH_GAS_API_URL = 'https://script.google.com/macros/s/AKfycbw8DyoSJzrg0jYvEmiNlP6VkPnvrsbC1582-BQmeq8HRJDS6nvhuXAn9GU519smD7w_dg/exec';
-  const fetchModData = async () => {
+const Main: React.FC = () => {
+  const [isFirstLoad, setIsFirstLoad] = useState<boolean>(true);
+  const [modData, setModData] = useState<ModData | null>(null);
+  const fetchModData: Function = async (): Promise<void> => {
     await axios(MESH_GAS_API_URL)
-    .then((res) => {
+    .then((res: AxiosResponse<ModData>) => {
       setModData(res.data);
       // 
       console.log('fetching successful', 'res.data is', res.data);
+      // 
+    })
+    .catch((e: AxiosError) => {
+      // console.log(e);
+      // console.log(e.message);
     });
   }
   useEffect(() => {
     // 
     console.log('Main is rendering');
+    // 
     if (isFirstLoad) {
       fetchModData();
       setIsFirstLoad(false);

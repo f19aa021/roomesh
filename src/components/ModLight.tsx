@@ -1,13 +1,24 @@
 import lightOnIcon from '../assets/img/light_on_icon.svg';
 import lightOffIcon from '../assets/img/light_off_icon.svg';
 
-const ModLight = ({light}) => {
+type Props = {
+  light: {
+    light: 'light-off' | 'light-on';
+    // lightSwitch: 'light-off' | 'light-on';
+    lightingHour: number;
+    LightPowerConsump: number;
+    // lightPowerConsump: number;
+    lightPowerPrice: number;
+  } | null;
+}
+
+const ModLight: React.FC<Props> = ({light}: Props) => {
   // const lightSwitch = light ? light.lightSwitch : null ;
   // // const lightgHour = light ? light.lightingHour : null ;
   // const lightPowerConsump = light ? light.lightPowerConsump : null ;
   // const lightPowerPrice = light ? light.lightPowerPrice : null ;
   // とりあえず
-  const lightSwitch = 'light-off';
+  const lightSwitch = (Math.random() > 0.5) ? 'light-off' : 'light-on';
   // const lightingHour = 0;
   const lightPowerConsump = 0.05;
   const lightPowerPrice = 1.75;

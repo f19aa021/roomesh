@@ -1,4 +1,8 @@
-const ModAttendance = ({attendance}) => {
+type Props = {
+  attendance: number | null;
+}
+
+const ModAttendance: React.FC<Props> = ({attendance}: Props) => {
   return (
     <div className="mod-box fade-up column2" id="attendance">
       <div className="mod-title">
