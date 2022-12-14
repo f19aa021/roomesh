@@ -18,12 +18,15 @@ html {
   background: linear-gradient(to bottom, #7983fc, #BF96B7);
 }
 main {
+  display: flex;
+  justify-content: center;
   padding: 12px;
 }
 #mod-panel {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: calc(294px * 4 + 12px * 8);
   color: #212121;
 }
 .mod-box {
@@ -104,26 +107,6 @@ main {
   animation-timing-function: ease;
   animation-fill-mode: both;
 }
-/* humidity */
-#humidity-icon > img {
-  margin-top: 9px;
-  height: 52.4px;
-  width: 52.4px;
-  filter: invert(7%) sepia(9%) saturate(44%) hue-rotate(314deg) brightness(82%) contrast(84%);
-}
-#humidity-value {
-  font-weight: 500;
-  font-size: 57.4px;
-  margin-left: 1.4px;
-  letter-spacing: 1px;
-}
-#humidity-unit {
-  font-weight: 700;
-  font-size: 28px;
-  margin-top: 20.5px;
-  margin-left: 3px;
-  margin-right: 15.2px;
-}
 /* temperature */
 #temperature-icon > img {
   margin-top: 12px;
@@ -144,6 +127,26 @@ main {
   margin-top: 23.2px;
   margin-right: 10.2px;
   transform: translateX(-4.6px);
+}
+/* humidity */
+#humidity-icon > img {
+  margin-top: 9px;
+  height: 52.4px;
+  width: 52.4px;
+  filter: invert(7%) sepia(9%) saturate(44%) hue-rotate(314deg) brightness(82%) contrast(84%);
+}
+#humidity-value {
+  font-weight: 500;
+  font-size: 57.4px;
+  margin-left: 1.4px;
+  letter-spacing: 1px;
+}
+#humidity-unit {
+  font-weight: 700;
+  font-size: 28px;
+  margin-top: 20.5px;
+  margin-left: 3px;
+  margin-right: 15.2px;
 }
 /* light */
 #light > .mod-content {
@@ -208,15 +211,13 @@ main {
   height: 61.4px;
   width: 61.4px;
   transform: translateX(-10px);
-}
-#restroom #restroom-icon > img {
   filter: opacity(.5) invert(7%) sepia(9%) saturate(44%) hue-rotate(314deg) brightness(82%) contrast(84%);
 }
 #restroom.restroom-in-use #restroom-icon > img {
   filter: opacity(1);
 }
 #restroom.restroom-free #restroom-icon > img {
-  filter: opacity(1);
+  filter: opacity(.5);
 }
 #restroom-status {
   font-weight: 700;

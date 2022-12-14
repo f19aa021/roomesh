@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/roomesh/static/css/main.5f26d11f.css",
-    "main.js": "/roomesh/static/js/main.bebe7025.js",
+    "main.css": "/roomesh/static/css/main.b3af8585.css",
+    "main.js": "/roomesh/static/js/main.e003cb7f.js",
     "static/media/restroom_icon.svg": "/roomesh/static/media/restroom_icon.88f49d482255859822ae41a0fc997d84.svg",
     "static/media/light_on_icon.svg": "/roomesh/static/media/light_on_icon.a600c9edf58c92095eafd6988f621c9c.svg",
     "index.html": "/roomesh/index.html",
     "static/media/temperature_icon.svg": "/roomesh/static/media/temperature_icon.56d2b51e59f1d65d5d9423857aedf102.svg",
     "static/media/light_off_icon.svg": "/roomesh/static/media/light_off_icon.b44453c0c643795c7dabb7b26c04ffa9.svg",
     "static/media/humidity_icon.svg": "/roomesh/static/media/humidity_icon.dc13d459a17509b61b17dcec24cd2711.svg",
-    "main.5f26d11f.css.map": "/roomesh/static/css/main.5f26d11f.css.map",
-    "main.bebe7025.js.map": "/roomesh/static/js/main.bebe7025.js.map"
+    "main.b3af8585.css.map": "/roomesh/static/css/main.b3af8585.css.map",
+    "main.e003cb7f.js.map": "/roomesh/static/js/main.e003cb7f.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f26d11f.css",
-    "static/js/main.bebe7025.js"
+    "static/css/main.b3af8585.css",
+    "static/js/main.e003cb7f.js"
   ]
 }
