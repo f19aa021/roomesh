@@ -1,10 +1,12 @@
+import React from 'react';
 import temperatureIcon from '../assets/img/temperature_icon.svg';
 
 type Props = {
   temperature: number | null;
 }
 
-const ModTemperature:React.FC<Props> = ({temperature}: Props) => {
+const ModTemperature:React.FC<Props> = React.memo(({ temperature }: Props) => {
+  console.log('mod_temperature is rendering');
   return (
     <div className="mod-box fade-up" id="temperature">
       <div className="mod-title">
@@ -19,5 +21,5 @@ const ModTemperature:React.FC<Props> = ({temperature}: Props) => {
       </div>
     </div>
   );
-}
+});
 export default ModTemperature;

@@ -12,10 +12,15 @@ type Props = {
 
 const ModPanel: React.FC<Props> = ({ modData }: Props) => {
   return (
-    <div id="mod-panel" className="scroll-hint">
+    <div id="mod-panel">
       <ModTemperature temperature={modData ? modData.temperature : null} />
       <ModHumidity humidity={modData ? modData.humidity : null} />
-      <ModLight light={modData ? modData.light : null} />
+      <ModLight
+        lightSwitch={modData ? modData.light.lightSwitch : null}
+        lightingHour={modData ? modData.light.lightingHour : null}
+        lightPowerConsump={modData ? modData.light.lightPowerConsump : null}
+        lightPowerPrice={modData ? modData.light.lightPowerPrice : null}
+      />
       <ModAttendance attendance={modData ? modData.attendance : null} />
       <ModRestroom restroom={modData ? modData.restroom : null} />
       <ModUnused />

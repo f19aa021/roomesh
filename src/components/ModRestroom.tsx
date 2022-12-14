@@ -1,10 +1,12 @@
+import React from 'react';
 import restroomIcon from '../assets/img/restroom_icon.svg';
 
 type Props = {
   restroom: 'in-use' | 'free' | null;
 }
 
-const ModRestroom: React.FC<Props> = ({restroom}: Props) => {
+const ModRestroom: React.FC<Props> = React.memo(({ restroom }: Props) => {
+  console.log('mod_restroom is rendering');
   const restroomStatus = (restroom === null) ? '--' : (restroom === 'in-use') ? '使用中' : '空室';
   return (
     <div className={`mod-box fade-up column2 ${
@@ -21,5 +23,5 @@ const ModRestroom: React.FC<Props> = ({restroom}: Props) => {
       </div>
     </div>
   );
-}
+});
 export default ModRestroom;

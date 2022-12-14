@@ -4,11 +4,9 @@ type ModData = {
   temperature: number;
   humidity: number;
   light: {
-    light: 'light-off' | 'light-on';
-    // lightSwitch: 'light-off' | 'light-on';
+    lightSwitch: 'light-off' | 'light-on';
     lightingHour: number;
-    LightPowerConsump: number;
-    // lightPowerConsump: number;
+    lightPowerConsump: number;
     lightPowerPrice: number;
   };
   attendance: number;

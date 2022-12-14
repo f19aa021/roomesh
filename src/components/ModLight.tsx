@@ -1,27 +1,16 @@
+import React from 'react';
 import lightOnIcon from '../assets/img/light_on_icon.svg';
 import lightOffIcon from '../assets/img/light_off_icon.svg';
 
 type Props = {
-  light: {
-    light: 'light-off' | 'light-on';
-    // lightSwitch: 'light-off' | 'light-on';
-    lightingHour: number;
-    LightPowerConsump: number;
-    // lightPowerConsump: number;
-    lightPowerPrice: number;
-  } | null;
+  lightSwitch: 'light-off' | 'light-on' | null;
+  lightingHour: number | null;
+  lightPowerConsump: number | null;
+  lightPowerPrice: number | null;
 }
 
-const ModLight: React.FC<Props> = ({light}: Props) => {
-  // const lightSwitch = light ? light.lightSwitch : null ;
-  // // const lightgHour = light ? light.lightingHour : null ;
-  // const lightPowerConsump = light ? light.lightPowerConsump : null ;
-  // const lightPowerPrice = light ? light.lightPowerPrice : null ;
-  // とりあえず
-  const lightSwitch = (Math.random() > 0.5) ? 'light-off' : 'light-on';
-  // const lightingHour = 0;
-  const lightPowerConsump = 0.05;
-  const lightPowerPrice = 1.75;
+const ModLight: React.FC<Props> = React.memo(({ lightSwitch, lightingHour, lightPowerConsump, lightPowerPrice }: Props) => {
+  console.log('mod_light is rendering');
   return (
     <div className={`mod-box fade-up ${
         (lightSwitch === 'light-on') ? 'light-on' : 'light-off'
@@ -41,5 +30,5 @@ const ModLight: React.FC<Props> = ({light}: Props) => {
       </div>
     </div>
   );
-}
+});
 export default ModLight;

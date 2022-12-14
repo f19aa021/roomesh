@@ -1,8 +1,11 @@
+import React from 'react';
+
 type Props = {
   attendance: number | null;
 }
 
-const ModAttendance: React.FC<Props> = ({attendance}: Props) => {
+const ModAttendance: React.FC<Props> = React.memo(({ attendance }: Props) => {
+  console.log('mod_attendance is rendering');
   return (
     <div className="mod-box fade-up column2" id="attendance">
       <div className="mod-title">
@@ -15,5 +18,5 @@ const ModAttendance: React.FC<Props> = ({attendance}: Props) => {
       </div>
     </div>
   );
-}
+});
 export default ModAttendance;
