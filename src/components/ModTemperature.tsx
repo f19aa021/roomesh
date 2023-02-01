@@ -6,7 +6,7 @@ type Props = {
 }
 
 const ModTemperature:React.FC<Props> = React.memo(({ temperature }: Props) => {
-  console.log('mod_temperature is rendering');
+  // console.log('mod_temperature is rendering');
   return (
     <div className="mod-box fade-up" id="temperature">
       <div className="mod-title">

@@ -6,7 +6,7 @@ type Props = {
 }
 
 const ModRestroom: React.FC<Props> = React.memo(({ restroom }: Props) => {
-  console.log('mod_restroom is rendering');
+  // console.log('mod_restroom is rendering');
   const restroomStatus = (restroom === null) ? '--' : (restroom === 'in-use') ? '使用中' : '空室';
   return (
     <div className={`mod-box fade-up column2 ${
