@@ -5,7 +5,7 @@ type Props = {
 }
 
 const ModAttendance: React.FC<Props> = React.memo(({ attendance }: Props) => {
-  console.log('mod_attendance is rendering');
+  // console.log('mod_attendance is rendering');
   return (
     <div className="mod-box fade-up column2" id="attendance">
       <div className="mod-title">

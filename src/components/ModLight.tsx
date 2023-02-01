@@ -10,7 +10,7 @@ type Props = {
 }
 
 const ModLight: React.FC<Props> = React.memo(({ lightSwitch, lightingHour, lightPowerConsump, lightPowerPrice }: Props) => {
-  console.log('mod_light is rendering');
+  // console.log('mod_light is rendering');
   return (
     <div className={`mod-box fade-up ${
         (lightSwitch === 'light-on') ? 'light-on' : 'light-off'
