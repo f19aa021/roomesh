@@ -1,32 +1,33 @@
 # roomesh
+IoTデバイスキット「MESH」を活用した
+<br>
+常時表示型インフォメーションディスプレイのWebアプリ
 
-IoTデバイスキット「MESH」を活用した常時表示型インフォメーションディスプレイのWebアプリ
-
-## まずMESHとは
+## MESHとは
 SONYの提供する、ブロック型の無線IoTセンサーデバイス。
+<br>
 専用のアプリを介して独自の機能を実装することができます。
 
-MESH：小さな便利を形にできる、IoTブロック｜ソニー<br>
+MESH：小さな便利を形にできる、IoTブロック｜ソニー
+<br>
 https://meshprj.com/jp/feature/index.html
 
 ## 何を作ったのか
 MESHを何かに活用できないかと考え、
-1. MESHより部屋の情報を収集
-1. 専用アプリとIFFFT、GASを利用してWebAPIを公開
-1. そのAPIを利用してWebアプリを作成
+MESHより部屋の情報を収集し、部屋情報WebAPIを公開。
+<br>
+部屋情報WebAPIから情報を逐次取得するWebアプリを作成し、
+MESHをおいた部屋の情報をどこからでも確認できるWebアプリを作成しました。
 <br>
 
-以上により部屋の情報をアプリで随時確認できるようにしました。
+図で詳しく表したものが以下です。
+<br>
 
-図で表したものが以下のようになっています。
-!(ここに画像)[link]
+![使用技術図](./public/diagram_of_tech_used.jpg "使用技術図")
 
-## 作成してみて
-Webアプリとして
-- 温度
-- 湿度
-- 電気の点灯、消費電力、電気料金
-- 登校者のカウント
-- トイレが使用中か空室か
+ドキュメントは以下です。
+<br>
 
-以上の部屋の情報を確認できるようになりました。
+MESHアプリ仕様書 - Google ドキュメント
+<br>
+https://docs.google.com/document/d/1g5y_MGJf_vFQ9Uh8pJ3wQpNNDPEaSZjoISPBvwj-aSI/edit?usp=sharing
